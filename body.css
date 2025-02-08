@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Kaisei+Tokumin:wght@400;700&display=swap');
 
 body {
+    font-family: 'Noto Sans JP', sans-serif;
     margin: 0;
     padding: 0;
-    height: 150vh; /* Makes page scrollable */
+    height: 300vh; /* Makes page scrollable */
 }
 
 #background-container {
@@ -28,14 +29,31 @@ body {
 }
 
 
-.fade {
-    opacity: 0; /* Start invisible */
+.describe {
+    position: fixed;
+    z-index: 2; /* Ensure this is above the overlay */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for contrast */
+    margin-top: 320px;
+    margin-left: 100px;
+    gap: 0px;
 }
+
+.describe h1 {
+    font-size: 75px;
+    font-weight: bolder;
+    margin-bottom: 10px; /* Reduces space between h1 and p */
+}
+
+.describe p {
+    margin-top: 0; /* Removes the default top margin on p */
+}
+
 
 .social-media {
     position: fixed; /* Keeps it fixed at the left edge */
     left: 0; /* Aligns to the left edge */
-    top: 35%; /* Adjusts vertical alignment */
+    top: 40%; /* Adjusts vertical alignment */
     display: flex;
     flex-direction: column;
     gap: 15px; /* Adds space between icons */
