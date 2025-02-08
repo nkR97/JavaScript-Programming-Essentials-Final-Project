@@ -2,9 +2,9 @@ nav {
     display: flex;  /* Enables flexbox */
     align-items: center;  /* Centers items vertically */
     padding: 10px;
-    border: 3px solid #E8E7D3;
+    border: 3px solid #335175;
     border-radius: 10px;
-    background-color: #E8E7D3;
+    background-color: #335175;
 }
 
 .name-logo {
@@ -42,7 +42,7 @@ nav {
 .search {
     display: flex;
     align-items: center;
-    position: relative; /* To position buttons inside input field */
+    gap: 5px; /* Adds spacing between elements */
 }
 
 /* Style for text input */
@@ -57,12 +57,14 @@ nav {
 
 /* Style for search and clear buttons */
 #search-button, #clear-text {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
+    padding: 8px 12px; /* Reduced padding */
+    font-size: 14px; /* Smaller text */
+    width: 80px; /* Fixed width for both buttons */
     border: 1px solid #ccc;
     border-radius: 5px;  
     background-color: #f1f1f1;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 /* Optional: Hover effect for buttons */
