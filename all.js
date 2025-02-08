@@ -1,7 +1,7 @@
 const backgrounds = [
-    './img/tokyo.jpg',  // for 0-49vh
-    './img/kyoto.jpg',  // for 50-99vh
-    './img/rio.jpg'     // for 100-150vh
+    './img/tokyo.jpg',
+    './img/kyoto.jpg',
+    './img/rio.jpg'
 ];
 
 const backgroundContainer = document.getElementById('background-container');
@@ -11,16 +11,8 @@ backgroundContainer.style.backgroundImage = `url('${backgrounds[0]}')`;
 
 // Smooth scroll transition effect
 window.addEventListener('scroll', function () {
-    // Calculate the scroll position relative to the page height
-    let scrollPosition = window.scrollY;
-    let index = 0;
-
-    // Set the image based on scroll position
-    if (scrollPosition >= window.innerHeight * 0.5 && scrollPosition < window.innerHeight * 1.0) {
-        index = 1; // Show Kyoto from 50-99vh
-    } else if (scrollPosition >= window.innerHeight * 1.0) {
-        index = 2; // Show Rio from 100-150vh
-    }
+    // Calculate index based on scroll position divided by 50vh (viewport height)
+    let index = Math.min(Math.floor(window.scrollY / (window.innerHeight / 2)), backgrounds.length - 1);
 
     // Only change the background if the current one is different
     if (backgroundContainer.style.backgroundImage !== `url("${backgrounds[index]}")`) {

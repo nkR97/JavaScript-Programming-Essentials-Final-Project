@@ -17,7 +17,35 @@ body {
     transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for both background and opacity */
     z-index: -1; /* Keeps it behind everything */
 }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(51, 81, 117, 0.9) 0%, rgba(51, 81, 117, 0) 50%, rgba(51, 81, 117, 0.9) 100%);
+    z-index: 0; /* Places it between the background image and text */
+}
+
 
 .fade {
     opacity: 0; /* Start invisible */
 }
+
+.social-media {
+    position: fixed; /* Keeps it fixed at the left edge */
+    left: 0; /* Aligns to the left edge */
+    top: 35%; /* Adjusts vertical alignment */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between icons */
+    padding: 10px;
+    z-index: 1;
+}
+
+.social-media a img {
+    width: 45px;  /* Adjust to desired size */
+    height: 45px; /* Adjust to desired size */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
+
