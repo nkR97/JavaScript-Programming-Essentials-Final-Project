@@ -1,0 +1,71 @@
+nav {
+    display: flex;  /* Enables flexbox */
+    align-items: center;  /* Centers items vertically */
+    padding: 10px;
+    border: 3px solid #E8E7D3;
+    border-radius: 10px;
+    background-color: #E8E7D3;
+}
+
+.name-logo {
+    display: flex;
+    align-items: center;
+    padding: 1px;
+}
+
+.name-logo img {
+    width: 50px;  /* Adjust size */
+    height: auto;
+    margin-right: 10px; /* Adds spacing between logo and text */
+}
+
+.name-logo h3 {
+    font-size: 20px;
+    margin: 0;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;  /* Centers items horizontally */
+    width: 100%;
+}
+
+.nav-links a {
+    font-size: 18px;
+    text-decoration: none;  /* Removes underline */
+    margin: 15px;  /* Add space between the links */
+    color: black;  /* Change this to your preferred color */
+}
+.nav-links a:hover {
+    color: #FFA07A;  /* Change this to your preferred color */
+}
+/* Style for search container */
+.search {
+    display: flex;
+    align-items: center;
+    position: relative; /* To position buttons inside input field */
+}
+
+/* Style for text input */
+#search-box {
+    width: 350px;  /* Makes the input field longer */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;  
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+/* Style for search and clear buttons */
+#search-button, #clear-text {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;  
+    background-color: #f1f1f1;
+}
+
+/* Optional: Hover effect for buttons */
+#search-button:hover, #clear-text:hover {
+    background-color: #ddd;
+}
