@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Kaisei+Tokumin:wght@400;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Noto Sans JP', sans-serif;
     margin: 0;
     padding: 0;
-
+    /* REMOVE height: 300vh; */
+    min-height: 100vh; /* Ensures body fills viewport but can expand further */
 }
 
 #background-container {
@@ -13,13 +18,13 @@ body {
     left: 0;
     width: 100%;
     height: 100vh; /* Fix */
-    background-image: url('./img/taj.jpg'); /* Ensure the path is correct */
+    background-image: url('./img/bora.jpg'); /* Ensure the path is correct */
     background-size: cover;
     background-position: center;
     z-index: -1; /* Keeps it behind everything */
 }
 .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -29,16 +34,18 @@ body {
 }
 
 .about-container {
-    position: fixed;
-    z-index: 2; /* Ensure this is above the overlay */
+    position: relative;
+    z-index: 2;
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-top: 85px;
     margin-left: 100px;
     gap: 0px;
+    /* Add padding-bottom to create space at the bottom */
+    padding-bottom: 50px; 
 }
 
-.about-container h4 {
+.details h4 {
     display: inline;
 }
 
@@ -59,4 +66,33 @@ body {
     height: 45px; /* Adjust to desired size */
     object-fit: cover; /* Ensures the image maintains aspect ratio */
 }
+
+.staff-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px; /* Adds space between employee boxes */
+    align-items: flex-start; /* Aligns items to the start of the container without forcing them to the same height */
+}
+
+.staff {
+    display: flex;
+    flex-direction: column; /* Keeps the image and text stacked vertically */
+    gap: 10px;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 410px; /* Ensures the width is based on the h3 */
+    height: auto; /* Adjusts height based on content */    
+}
+
+.staff h3 {
+    margin: 0; /* Removes the default margin on h3 */
+}
+
+.staff p {
+    margin: 0; /* Removes the default margin on p */
+}
+
+
 
