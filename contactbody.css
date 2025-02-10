@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Kaisei+Tokumin:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Fix */
+    background-image: url('./img/angkor.jpg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Keeps it behind everything */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(51, 81, 117, 0.9) 0%, rgba(51, 81, 117, 0) 50%, rgba(51, 81, 117, 0.9) 100%);
+    z-index: 0; /* Places it between the background image and text */
+}
+
+.social-media {
+    position: fixed; /* Keeps it fixed at the left edge */
+    left: 0; /* Aligns to the left edge */
+    top: 40%; /* Adjusts vertical alignment */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between icons */
+    padding: 10px;
+    z-index: 1;
+}
+
+.social-media a img {
+    width: 45px;  /* Adjust to desired size */
+    height: 45px; /* Adjust to desired size */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
+.contact-info {
+    position: fixed;
+    font-size: 30px;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 335px;
+    margin-left: 100px;
+    gap: 0px;
+    /* Add padding-bottom to create space at the bottom */
+    padding-bottom: 50px; 
+}
+
+.contact-form {
+    position: fixed; /* Ensure the form is positioned relative to its container */
+    z-index: 10; /* A higher value to make sure it’s above the overlay */
+    float: right;
+    right: 320px;
+    bottom : 250px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #334d5c; /* Darker tone for headings */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact-form label {
+    font-size: 16px;
+    color: #334d5c; /* Matching the header color */
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #51b8d1; /* Color change on focus */
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #51b8d1; /* Soft blue */
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3a8fa4; /* Darker blue on hover */
+}
