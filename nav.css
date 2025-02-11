@@ -35,6 +35,10 @@ nav {
     letter-spacing: 0.5px;
 }
 
+.name-logo a {
+    text-decoration: none; /* Removes the underline from the link */
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
@@ -63,7 +67,7 @@ nav {
 }
 
 #search-box {
-    width: 250px;
+    width: 404px;
     padding: 10px 15px;
     border: none;
     border-radius: 25px;
@@ -93,3 +97,32 @@ nav {
     color: #333;
     transform: translateY(-2px);
 }
+
+.search-result {
+    position: fixed; /* Keeps it fixed on the screen */
+    top: 75px; /* Adjust as needed */
+    right: 220px; /* Positions it on the right side */
+    width: 430px; /* Matches result box width */
+    z-index: 1200; /* Ensures it stays above other elements */
+    display: flex;
+    flex-direction: column; /* Ensures each result is in its own row */
+    gap: 10px; /* Adds spacing between results */
+    max-height: 80vh; /* Limits the height to 80% of the viewport */
+    overflow-y: auto; /* Adds vertical scrolling if content exceeds the max height */
+}
+
+
+.result {
+    background-color: white;
+    width: 404px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow */
+}
+
+.result img {
+    width: 384px;
+    height: 216px;
+    cursor: pointer;
+}
+
