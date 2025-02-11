@@ -1,6 +1,6 @@
 const backgrounds = [
     './img/tokyo.jpg',
-    './img/kyoto.jpg',
+    './img/melbourne.jpg',
     './img/rio.jpg'
 ];
 const texts = [{h1:'Who is WanderWise?' , p:'WanderWise is your personal travel assistant, helping you discover the perfect destinations tailored to your unique style.'},
