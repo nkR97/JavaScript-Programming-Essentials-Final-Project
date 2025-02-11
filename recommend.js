@@ -1,5 +1,6 @@
 var data;
 
+
 // Event listener for search button click
 document.getElementById('search-button').addEventListener('click', function() {
     const userinput = document.getElementById('search-box').value.toLowerCase();

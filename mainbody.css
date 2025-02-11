@@ -58,6 +58,11 @@ body {
     margin-top: 0; /* Removes the default top margin on p */
 }
 
+.describe img {
+    width: 240px;
+    height: 180px;
+    margin-left: 300px;
+}
 
 .social-media {
     position: fixed; /* Keeps it fixed at the left edge */

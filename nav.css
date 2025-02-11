@@ -99,30 +99,85 @@ nav {
 }
 
 .search-result {
-    position: fixed; /* Keeps it fixed on the screen */
-    top: 75px; /* Adjust as needed */
-    right: 220px; /* Positions it on the right side */
-    width: 430px; /* Matches result box width */
-    z-index: 1200; /* Ensures it stays above other elements */
+    position: fixed;
+    top: 75px;
+    right: 220px;
+    width: 430px;
+    z-index: 1200;
     display: flex;
-    flex-direction: column; /* Ensures each result is in its own row */
-    gap: 10px; /* Adds spacing between results */
-    max-height: 80vh; /* Limits the height to 80% of the viewport */
-    overflow-y: auto; /* Adds vertical scrolling if content exceeds the max height */
+    flex-direction: column;
+    gap: 15px;
+    max-height: 80vh;
+    overflow-y: scroll; /* Keep scrolling enabled */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border for better definition */
 }
 
+.search-result::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for Webkit browsers like Chrome and Safari */
+}
+
+.search-result:empty {
+    display: none; /* Hide when empty */
+}
+
+.search-result:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
 
 .result {
-    background-color: white;
-    width: 404px;
-    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    padding: 18px;
     box-sizing: border-box;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow */
-}
-
-.result img {
-    width: 384px;
-    height: 216px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
 
+.result img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.result img:hover {
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+.result:hover {
+    transform: scale(1.03); /* Slight scale-up on hover */
+}
+
+.result h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 12px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.result h3:hover {
+    color: #007bff; /* Highlight the title on hover */
+}
+
+.result p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 6px;
+    line-height: 1.6;
+    transition: color 0.3s ease-in-out;
+}
+
+.result p:hover {
+    color: #444; /* Slight color change on hover */
+}
